@@ -15,5 +15,14 @@
     "mustache-express": "^1.2.5",
     "nodemon": "^1.11.0",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shontaehogan/userDirectory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shontaehogan/userDirectory/issues"
+  },
+  "homepage": "https://github.com/shontaehogan/userDirectory#readme"
 }

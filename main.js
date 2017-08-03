@@ -16,28 +16,27 @@ app.use(express.static('public'));
 
 //this sends my INDEX.HTML page to the browser
 app.get('/', function(req, res) {
-    res.render('index', {users:data.users})
+    res.render('index.mustache', {users:data.users});
 });
 
-app.get('/users/:indexNum', function (req, res) {
+app.get('/:indexNum/', function (req, res) {
 
 // create variable for index
-let username = req.params.robotName;
-let robotItem = null;
+let i = parseInt(req.params.indexNum) - 1;
+// let user = data.users.find(function(user) {return user.username == req.params.username});
+// for (let i = 0; i < data.users.length; i++) {
 
+res.render('user.mustache', data. users[i]);
 
-for (let i = 0; i < data.users.length; i++) {
-  let item = data.users[i];
-  if(item.username === username) {
-    robotItem = item;
-  }
-}
-
-
-res.render('robotIt', robotItem);
 });
+//
+//
+//     break;
+//   }
+// }
+// // res.render('robotItem', robotItem);
 
 //this tells the browser which PORT to use
 app.listen(3000, function () {
   console.log('Successful!')
-});
+})
